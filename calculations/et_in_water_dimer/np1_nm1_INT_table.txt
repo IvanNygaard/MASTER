@@ -1,0 +1,47 @@
+Basis: aug-cc-pVDZ
+
+R = 2 Å 
+
+A = Elektrondonor (H-bond akseptor)
+B = Elektron akseptor (H-bond donor)
+
+Energier er cp-korrigerte ved å bruke dimer-basis på monomer beregninger (ghost). 
+
+RHF:
+——-
+E_AB     = -152.089083078578 a.u.
+E_A^(AB) = -76.041734843715 a.u.
+E_B^(AB) = -76.041452720609  a.u.
+
+E_int,RHF = (E_AB - E_A^(AB) - E_B^(AB)) * 627.5095 = -3.69949120177 kcal/mol
+
+
+(ikke charge localized) CCSD:
+—————————————
+E_AB     = -152.549590706179 a.u.
+E_A^(AB) = -76.271673697696  a.u.
+E_B^(AB) = -76.271173428628  a.u.
+
+
+E_int,CCSD = (E_AB - E_A^(AB) - E_B^(AB)) * 627.5095 = -4.23166042302 kcal/mol
+
+
+cl-CCSD:
+———-----
+E_AB     = -152.541116343735 a.u.
+E_A^(AB) = -76.266150496801 a.u.
+E_B^(AB) = -76.269554476302 a.u.
+
+
+E_int,CCSD = (E_AB - E_A^(AB) - E_B^(AB)) * 627.5095 = -3.3956864796 kcal/mol
+
+cl-CCSD-eom: 
+——————-—
+E_AB^(lambda = -1) = -152.545870800285 a.u.
+E_A^(lambda = -1)  = -76.269432407790  a.u.
+E_B^(lambda = 0)   = -76.269554476302  a.u. (B er bare cl-ccsd energien)
+                 
+
+E_int,cl-CCSD-eom = (E_AB^(lambda = -1) - E_A^(lambda = -1) - E_B^(lambda = 0)) * 627.5095 = -4.31972280831 kcal/mol
+
+deltaE_int = -4.23166042302 + 4.31972280831 = -0.08806238529 kcal/mol = -0.00014033633 a.u. 
